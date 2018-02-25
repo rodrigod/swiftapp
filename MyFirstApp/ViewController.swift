@@ -12,12 +12,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
     
-    var tapCount: Int = 0;
+    @IBOutlet weak var firstNum: UITextField!
+    @IBOutlet weak var secondNum: UITextField!
+
     
     @IBAction func buttonTapped(_ sender: Any) {
-        tapCount += 1;
-        self.myLabel.text = String(tapCount)
-        print(tapCount)
+
+        let result = "Sum is ...  \(Double(firstNum.text!)! + Double(secondNum.text!)!)";
+        self.myLabel.text = String(result)
     }
 
     override func viewDidLoad() {
